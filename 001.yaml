@@ -1,0 +1,49 @@
+openapi: 3.0.1
+info:
+  title: YesNo
+  description: "This is a sample definition for the always-fabulous YesNo API."
+  version: 99.9.9
+externalDocs:
+  description: Find out more about YesNo
+  url: https://yesno.wtf/#api
+servers:
+- url: https://yesno.wtf/
+tags:
+- name: api
+  description: The only endpoint YesNo offers
+  externalDocs:
+    description: Find out more
+    url: https://yesno.wtf/#api
+paths:
+  /api:
+    get:
+      tags:
+      - api
+      summary: "Seek a random yes or no"
+      operationId: seekAnswer
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/YesNo'
+components:
+  schemas:
+    YesNo:
+      required:
+      - answer
+      - image
+      type: object
+      properties:
+        answer:
+          type: string
+          description: "yes or no"
+          example: "yes"
+          enum:
+          - "yes"
+          - "no"
+        image:
+          type: string
+          description: The URL to a random GIF of a celebrity expressing the answer
+          example: https://yesno.wtf/assets/no/13-755222c98795431aa2e7d453ab1e75a1.gif
