@@ -7,7 +7,7 @@ externalDocs:
   description: Find out more about YesNo
   url: https://yesno.wtf/#api
 servers:
-- url: https://yesno.wtf/
+- url: https://yesno.wtf
 tags:
 - name: api
   description: The only endpoint YesNo offers
