@@ -2,7 +2,7 @@ openapi: 3.0.1
 info:
   title: YesNo
   description: "This is a sample definition for the always-fabulous YesNo API."
-  version: 99.9.9
+  version: 0.1.0
 externalDocs:
   description: Find out more about YesNo
   url: https://yesno.wtf/#api
